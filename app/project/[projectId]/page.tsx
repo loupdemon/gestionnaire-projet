@@ -8,6 +8,7 @@ import { getProjectInfo } from "../../actions";
 import { toast } from "react-toastify";
 import UserInfo from "@/app/components/UserInfo";
 import ProjectComponent from "@/app/components/ProjectComponent";
+import { CopyPlus } from "lucide-react";
 
 const Page = ({ params }: { params: Promise<{ projectId: string }> }) => {
     const { user } = useUser();
@@ -60,10 +61,12 @@ const Page = ({ params }: { params: Promise<{ projectId: string }> }) => {
 
                 <div className="mt-6 md:ml-6 md:mt-0 md:w-3/4">
                     <div className="md:flex md:justify-between">
-                        <Link href={`/new-task/${projectId}`}>
-                            <button className="btn btn-primary mb-4">
-                                Créer une tâche
-                            </button>
+                        <Link
+                            href={`/new-task/${projectId}`}
+                            className="btn btn-sm mt-2 md:mt-0"
+                        >
+                            Créer une tâche
+                            <CopyPlus className="w-4 ml-2" />
                         </Link>
                     </div>
                 </div>

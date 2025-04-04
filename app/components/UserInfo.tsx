@@ -13,7 +13,7 @@ const UserInfo: FC<UserInfoProps> = ({ role, email, name }) => {
             <div className="avatar">
                 <div className="ring-primary ring-offset-base-100 w-9rounded-full ring-offset-2">
                     <Image
-                        src={"/projet_collaborateur.png"}
+                        src={"/avatar.png"}
                         alt={"user"}
                         width={40}
                         height={40}
